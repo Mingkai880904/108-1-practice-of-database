@@ -1,0 +1,10 @@
+1.
+
+2.
+INSERT INTO bk_std_names_table(std_name)
+SELECT ksu_std_name
+FROM ksu_std_table
+WHERE ksu_std_department = "IE" OR ksu_std_grade < 50
+INTERSECT
+SELECT std_name
+FROM student_detail
